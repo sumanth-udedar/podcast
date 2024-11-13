@@ -11,7 +11,7 @@ const LeftSidebar = () => {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <section className="left_sidebar">
+    <section>
       <nav className="flex flex-col gap-6">
         <Link
           href="/"
@@ -32,7 +32,7 @@ const LeftSidebar = () => {
               href={route}
               key={label}
               className={cn(
-                "flex gap-3 items-center py-4 max-lg:px-4 justify-center lg:justify-start text-white-1",
+                "flex gap-3 items-center py-4 max-lg:px-4 justify-center lg:justify-start",
                 {
                   "bg-nav-focus border-r-4 border-orange-1": isActive,
                 }

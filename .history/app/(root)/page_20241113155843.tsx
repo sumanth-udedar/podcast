@@ -10,13 +10,13 @@ const page = () => {
         <h1 className="text-20 font-bold text-white-1">Trending podcast</h1>
         {/* <Button className='text-white-1 bg-orange-1'>Button</Button>  commented this*/}
         <div className="podcast_grid">
-          {podcastData.map(({ id, title, description, imgURL }) => (
+          {podcastData.map(({ id, title, description, imageUrl }) => (
             <PodcastCard
-              key={id}
-              imgUrl={imgURL}
-              title={title}
-              description={description}
-              podcastId={id}
+              key={_id}
+              imgUrl={imageUrl as string}
+              title={podcastTitle}
+              description={podcastDescription}
+              podcastId={_id}
             />
           ))}
         </div>

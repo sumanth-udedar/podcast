@@ -11,7 +11,7 @@ const LeftSidebar = () => {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <section className="left_sidebar">
+    <section>
       <nav className="flex flex-col gap-6">
         <Link
           href="/"

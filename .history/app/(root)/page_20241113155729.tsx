@@ -1,6 +1,4 @@
-import PodcastCard from "@/components/PodcastCard";
 import { Button } from "@/components/ui/button"; //if hadnt imported this then i wont be able to use button tag
-import { podcastData } from "@/constants";
 import React from "react";
 
 const page = () => {
@@ -10,15 +8,17 @@ const page = () => {
         <h1 className="text-20 font-bold text-white-1">Trending podcast</h1>
         {/* <Button className='text-white-1 bg-orange-1'>Button</Button>  commented this*/}
         <div className="podcast_grid">
-          {podcastData.map(({ id, title, description, imgURL }) => (
-            <PodcastCard
-              key={id}
-              imgUrl={imgURL}
-              title={title}
-              description={description}
-              podcastId={id}
-            />
-          ))}
+          {trendingPodcasts?.map(
+            ({ _id, podcastTitle, podcastDescription, imageUrl }) => (
+              <PodcastCard
+                key={_id}
+                imgUrl={imageUrl as string}
+                title={podcastTitle}
+                description={podcastDescription}
+                podcastId={_id}
+              />
+            )
+          )}
         </div>
       </section>
     </div>
